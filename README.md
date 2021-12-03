@@ -27,13 +27,8 @@ The main features of QUIC over existing TCP+TLS+HTTP2 that we are focusing on ar
 
 ### The Emulating Environment
 #### Experimental Platform 
-* Hardware
+Our experiments were performed on a virtual machine using VirtualBox.
 
-  | Hardware  | Parameters                                  |
-  | --------- | ----------------------------------------    |
-  | Memory    | 16GB                                        |
-  | Processor | Intel® Xeon(R) CPU E3-1230 v5 @ 3.40GHz × 8 |
-  | Disks     | SAMSUNG 850 EVO                             |
 * Software
 
   | Software |      Parameters         |
