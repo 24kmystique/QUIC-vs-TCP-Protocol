@@ -35,7 +35,7 @@ Our experiments were performed on a virtual machine using VirtualBox.
   | -------- | ----------------------- |
   | OS       | Ubuntu16.04             |
   | OS-type  | 64 bit                  |
-  | Kernel   | Linux 4.4.0-104-generic |
+  | Kernel   | Linux 4.4.0-210-generic |
   | GCC      | GCC 5.4                 |
   | Python   | Python 2.7.12           |
   
