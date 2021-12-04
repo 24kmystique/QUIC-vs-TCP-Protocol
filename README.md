@@ -108,6 +108,23 @@ The average RTT for QUIC is 24.20 ms and the average RTT for TCP is 25.65 ms. QU
 <img src="https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/resources/images/table_results_for_connection_establishment.png" width="600">
 
 
+## Future Work
+
+During our analysis when conducting the experiment for connection establishment, we found that the experimental setup used in loss recovery can be improved and is not ideal for conducting the connection establishment experiment. This is due to the limitations of tcpdump. When the packets are small or the total recording time of the network is too short, tcpdump is unable to capture the network packets. However, we found this issue at the later part of the project and was unable to implement it for our loss recovery experiments. Fortunately, we were able to modify the code to ensure that our connection establishment experiments hold higher accuracy.
+
+### Modifying Scripts in connection_establishment Folder to Perform Loss Recovery Experiments with Higher Accuracy
+#### Current Version
+What's new: (compared to scripts in loss_recovery folder)
+- In run.sh , run TCP and QUIC individually. Each TCP/QUIC run will execute 10 test cases.
+- All testcases network traffic will be recorded in one sitting. Previously, pcap will be overwritten after each test case. 
+
+What might not work:
+- files in raw folder will be empty as the codes that write the files in this folder are commented
+- If uncomment the code that writes the file in raw folder, the plots are not plotted properly. This is because `tcpdump` is unable to read packet size larger than 65535 bytes.
+
+#### Future Quick Fix (to implement in subsequent version)
+- Use [pyshark](https://github.com/KimiNewt/pyshark) to read the pcap files and extract the relevant information needed to calculate the loss recovery performance.
+
 ## Reference
 This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_vs_tcp).
 
