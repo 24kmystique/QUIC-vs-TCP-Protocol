@@ -80,6 +80,8 @@ Note to update the file path in `server.sh` accordingly.
 ```
 Note to update the file paths in `env_setup.sh`, `run.sh` and `analyse.sh` accordingly. 
 
+4. To run the experiment for loss recovery, use the scripts in the [loss_recovery folder](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/tree/main/loss_recovery) `cd loss_recovery`. To run the experiment for connection establishment, use the scripts in the [connection_establishment folder](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/tree/main/connection_establishment) `cd connection_establishment`. 
+
 ## Results
 
 ### Loss Recovery 
