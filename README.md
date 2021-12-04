@@ -115,12 +115,12 @@ During our analysis when conducting the experiment for connection establishment,
 ### Modifying Scripts in connection_establishment Folder to Perform Loss Recovery Experiments with Higher Accuracy
 #### Current Version
 What's new: (compared to scripts in loss_recovery folder)
-- In run.sh , run TCP and QUIC individually. Each TCP/QUIC run will execute 10 test cases.
+- In `./scripts/run.sh`, run TCP and QUIC individually. Each TCP/QUIC run will execute 10 test cases.
 - All testcases network traffic will be recorded in one sitting. Previously, pcap will be overwritten after each test case. 
 
 What might not work:
-- files in raw folder will be empty as the codes that write the files in this folder are commented
-- If uncomment the code that writes the file in raw folder, the plots are not plotted properly. This is because `tcpdump` is unable to read packet size larger than 65535 bytes.
+- Files in raw folder will be empty as the codes that write the files in this folder are commented
+- If the codes that write the file in raw folder are uncommmented, the plots are not plotted properly. This is because `tcpdump` is unable to read packet size larger than 65535 bytes.
 
 #### Future Quick Fix (to implement in subsequent version)
 - Use [pyshark](https://github.com/KimiNewt/pyshark) to read the pcap files and extract the relevant information needed to calculate the loss recovery performance.
