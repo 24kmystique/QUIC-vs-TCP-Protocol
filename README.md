@@ -6,17 +6,9 @@ In this project, we explore the Quick UDP Internet Connection (QUIC) protocol de
 ### Problem Statement
 Examine how network latency is reduced when QUIC is used in place of TCP, and to measure the improvement in network performance of QUIC over TCP. 
 
-### Motivations
-Limitations of HTTP (TLS/TCP)
-* Difficult to upgrade TCP due to middleboxes such as firewalls and Network Address Translators
-* Different versions of user OS limits the speed at which the TCP stack is changed
-* TCP + TLS incur additional RTTs during handshake
-* Head-of-line blocking delay in event of retransmissions
+### Motivation
+The demand and usage of web services are growing (Langley et al., 2017). To cope with the growth, web latency is an important factor to maintain a good user experience. The limitations of the TLS/TCP ecosystem are key factors that hinder attempts to reduce web latency. Below is a list of limitations in the TLS/TCP ecosystem (as seen in Figure 1). Hence, QUIC is designed and developed to improve web latency. The motivation behind studying QUIC protocol is to understand how QUIC is designed to improve web latency.
 
-Limitations of UDP
-* No encryption
-* No built-in error recovery for lost/corrupted packets
-* No congestion control
 
 ### QUIC Design for Improved Performance
 The main features of QUIC over existing TCP+TLS+HTTP2 that we are focusing on are:
@@ -101,3 +93,21 @@ QUIC yields higher throughput than TCP when there is packet delay and thus has b
 
 ## Reference
 This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_vs_tcp).
+
+
+### Connection Establishment
+
+#### QUIC vs TCP Performance 
+10 test cases were executed for each protocol.
+
+The average RTT for QUIC is 24.20 ms and the average RTT for TCP is 25.65 ms. 
+
+<img src="https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/resources/images/table_results_for_connection_establishment.png" width="600">
+
+## Contributors
+
+- [Ong Li Wen](https://github.com/24kmystique)
+- [Madhumitha Balaji](https://github.com/Madhu-balaji-01)
+- [Caryl Beatrice Peneyra](https://github.com/carrotbeetrice)
+- [Harshit Garg](https://github.com/harshitgarg03)
+- [Chua Qi Bao](https://github.com/chuaqibao)
