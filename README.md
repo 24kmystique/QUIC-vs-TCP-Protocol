@@ -98,3 +98,5 @@ QUIC yields much higher throughput under high loss environments than TCP and hen
 #### QUIC vs TCP Performance under Packet Delay
 <img src="https://user-images.githubusercontent.com/62118373/144176023-67f90b7f-a4b7-46a5-bbd1-2b43d6a6f6a9.png" width="600">
 QUIC yields higher throughput than TCP when there is packet delay and thus has better performance in this aspect. 
+
+This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_vs_tcp).
