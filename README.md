@@ -91,10 +91,6 @@ QUIC yields much higher throughput under high loss environments than TCP and hen
 <img src="https://user-images.githubusercontent.com/62118373/144176023-67f90b7f-a4b7-46a5-bbd1-2b43d6a6f6a9.png" width="600">
 QUIC yields higher throughput than TCP when there is packet delay and thus has better performance in this aspect. 
 
-## Reference
-This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_vs_tcp).
-
-
 ### Connection Establishment
 
 #### QUIC vs TCP Performance 
@@ -103,6 +99,13 @@ This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_v
 The average RTT for QUIC is 24.20 ms and the average RTT for TCP is 25.65 ms. 
 
 <img src="https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/resources/images/table_results_for_connection_establishment.png" width="600">
+
+
+## Reference
+This framework was adopted from [quic_vs_tcp](https://github.com/Shenggan/quic_vs_tcp).
+
+
+
 
 ## Contributors
 
