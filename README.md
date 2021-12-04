@@ -54,7 +54,7 @@ Our experiments were performed on a virtual machine using VirtualBox.
 ### Starting the Experiment
 
 #### Setting up VM
-1. Clone the [source of chromium](https://www.chromium.org/developers/how-tos/get-the-code)
+1. Clone the [source of chromium](https://www.chromium.org/developers/how-tos/get-the-code) and follow the instructions to build Chromium on Linux. 
 2. Install dependencies when building for first time
 ```
 ./src/build/install-build-deps.sh
