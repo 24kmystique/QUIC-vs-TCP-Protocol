@@ -1,11 +1,12 @@
 # 50.012 Project Group 6
 
 ## Introduction
+In this project, we explore the Quick UDP Internet Connection (QUIC) protocol developed by Google. 
 
 ### Problem Statement
 Examine how network latency is reduced when QUIC is used in place of TCP, and to measure the improvement in network performance of QUIC over TCP. 
 
-### Motivation
+### Motivations
 Limitations of HTTP (TLS/TCP)
 * Difficult to upgrade TCP due to middleboxes such as firewalls and Network Address Translators
 * Different versions of user OS limits the speed at which the TCP stack is changed
@@ -63,7 +64,7 @@ Our experiments were performed on a virtual machine using VirtualBox.
 cd src
 gn gen out/Default && ninja -C out/Default quic_client quic_server net_unittests
 ```
-4. Set-up [Apache2 Server](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)
+4. Set-up [Apache2 Server](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview) and configure it to use SSL.
 
 #### Running the Experiment
 1. Prepare test data from www.example.org 
@@ -90,7 +91,6 @@ Note to update the file paths in `env_setup.sh`, `run.sh` and `analyse.sh` accor
 ## Results
 
 ### Loss Recovery 
-
 #### QUIC vs TCP Performance under High Packet Loss
 <img src="https://user-images.githubusercontent.com/62118373/144176097-2e079619-0b6d-4a1f-b1e4-dd066e2a6c48.png" width="600">
 
