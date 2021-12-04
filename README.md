@@ -98,9 +98,10 @@ QUIC yields higher throughput than TCP when there is packet delay and thus has b
 #### QUIC vs TCP Performance 
 10 test cases were executed for each protocol. As the original pcap generated via `tcpdump` cannot be analysed via [Wireshark](https://www.wireshark.org/) or `tcpdump`. This is because the packet size is too large and there is a packet size limit for both tools. Hence, [pcapfix](https://f00l.de/hacking/pcapfix.php), an open-source tool, is used to analyse the pcap files.
 
-The original pcap files are [tcp pcap file](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/tcp_10_test.pcap) and [quic pcap file](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/quic_10_test.pcap). 
+The original pcap files generated via `tcpdump` after running the scripts are [tcp_10_test.pcap](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/tcp_10_test.pcap) and [quic_10_test.pcap](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/quic_10_test.pcap). 
 
-The final pcap files used to analyse the packets are [tcp pcap file](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/tcp_10_test_fixed.pcap) and [quic pcap file](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/quic_10_test_fixed.pcap).
+The final pcap files used to analyse the packets are [tcp_10_test_fixed.pcap](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/tcp_10_test_fixed.pcap) and [quic_10_test_fixed.pcap](https://github.com/24kmystique/QUIC-vs-TCP-Protocol/blob/main/experiment%20results/connection%20establishment/quic_10_test_fixed.pcap).
+
 
 The average RTT for QUIC is 24.20 ms and the average RTT for TCP is 25.65 ms. QUIC has a lower RTT compared to that of TCP.
 
